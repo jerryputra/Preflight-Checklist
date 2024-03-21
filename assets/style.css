@@ -1,0 +1,18 @@
+@page {
+    size: A4;
+    margin: 2cm; /* margin 2 cm di setiap sisi */
+
+}
+
+
+
+
+
+
+input[type="number"] {
+    pointer-events: none;
+}
+
+input[type="checkbox"] {
+    pointer-events: none;
+}
