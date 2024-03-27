@@ -20,6 +20,6 @@ class view extends CI_Controller {
 	 */
 
 	public function vieww(){
-        $this->load->view('view');
+        $this->load->view('cetak');
     }
 }

@@ -11,6 +11,21 @@ include 'application/controllers/logic.php';
 <head>
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script>
+        function validateForm() {
+            var inputField = document.getElementById('inputField').value;
+
+            if (inputField == "") {
+                alert("Input field cannot be empty");
+                return false; // Menghentikan pengiriman form
+            }
+            return true; // Memungkinkan pengiriman form
+        }
+    </script>
+
+
+
 </head>
 
 <body>
@@ -36,7 +51,7 @@ include 'application/controllers/logic.php';
     <!-- navbar end -->
 
     <!-- content -->
-    <form action="<?php echo base_url('logic/logicc')?>" method="POST"
+    <form action="<?php echo base_url('logic/logicc')?>" method="POST" onsubmit="return validateForm()"
         >
         <div class="container-lg">
             <h3>Tambahkan Data Preflight Checklist</h3>
@@ -47,8 +62,8 @@ include 'application/controllers/logic.php';
                         <th colspan="5">DATE</th>
                     </tr>
                     <tr>
-                        <td colspan="4"><input class="form-control" placeholder="Masukan Flight Number" name="tflt"></td>
-                        <td colspan="4"><input type="date" class="form-control" placeholder="" name="tdate"></td>
+                        <td colspan="4"><input class="form-control" placeholder="Masukan Flight Number" name="tflt" id="inputField"></td>
+                        <td colspan="4"><input type="date" class="form-control" placeholder="" name="tdate" id="inputField"></td>
                     </tr>
                     <tr>
                         <th colspan="1">A/C REG.: PK</th>
@@ -56,7 +71,7 @@ include 'application/controllers/logic.php';
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <select class="form-control" name="treg">
+                            <select class="form-control" name="treg" id="inputField">
                                 <option selected>Pilihan</option>
                                 <option value="JKT">JKT</option>
                                 <option value="BDG">BDG</option>
@@ -68,7 +83,7 @@ include 'application/controllers/logic.php';
                         </td>
                         <td colspan="4">
                             <!-- <input class="form-control" placeholder="Masukan Kode Departure" name="tdep"> -->
-                            <select class="form-control" name="tdep">
+                            <select class="form-control" name="tdep" id="inputField">
                                 <option selected>Pilihan</option>
                                 <option value="JKT">JKT</option>
                                 <option value="BDG">BDG</option>
