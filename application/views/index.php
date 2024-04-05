@@ -14,6 +14,9 @@ $this->load->helper('url');
 <head>
     <title>Dashboarda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+
 </head>
 
 <body>
@@ -40,7 +43,7 @@ $this->load->helper('url');
     <div class="container-fluid">
 
         <!-- Button trigger modal -->
-        <a href="<?php echo base_url('inputData'); ?>">
+        <a id="myButton" href="<?php echo base_url('inputData')?>" onclick="tambahdata()">
             <button type="button" class="btn btn-primary">
                 Tambahkan Data
             </button>
@@ -77,8 +80,8 @@ $this->load->helper('url');
                         <td><?= $data['date'] ?></td>
                         <td><?= $data['dep'] ?></td>
                         <td>
-                            <a href="<?php echo base_url('view')?>?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-info">View</a>
-                            <a href="<?php echo base_url('edit')?>?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-warning">Edit</a>
+                            <a href="<?php echo base_url('view') ?>?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-info">View</a>
+                            <a href="<?php echo base_url('edit') ?>?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-warning">Edit</a>
                             <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $no ?>">Hapus</a>
                         </td>
                     </tr>
@@ -145,7 +148,7 @@ $this->load->helper('url');
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Konfirmasi Hapus Data Preflight Checklist</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <form method="POST" action="<?php echo base_url('logic/logicc')?>">
+                                <form method="POST" action="<?php echo base_url('logic/logicc') ?>">
                                     <input type="hidden" name="id_flight" value="<?= $data['id_flight'] ?>">
                                     <div class="modal-body">
 
@@ -168,7 +171,7 @@ $this->load->helper('url');
 
 
                 <?php endwhile; ?>
-                
+
             </tbody>
         </table>
     </div>
@@ -177,31 +180,24 @@ $this->load->helper('url');
     <!-- content end -->
 
 
-    <!-- <script>
-        $(document).ready(function() {
-            $("#bhapus").click(function() {
-                var id_flight = $("#id_flight").val();
-                $.ajax({
-                    url: "Auth.php",
-                    type: "POST",
-                    data: {
-                        id_flight: id_flight
-                    },
-                    success: function(response) {
-                        // Handle response, update view if necessary
-                        console.log(response);
-                    }
-                });
-            });
-        });
-    </script> -->
+
 
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script>
+        function tambahdata() {
+            $.get("<?php echo base_url('inputData')?>", function(data) {
+                $("myButton").html(data);
+                alert("Load was performed.");
+            });
+        }
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

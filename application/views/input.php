@@ -24,13 +24,40 @@ include 'application/controllers/logic.php';
         }
     </script>
 
+    <script src="<?php echo base_url('home') ?>"></script>
 
+    <script>
+        $(documnet).ready(function() {
+            //memebrikan event click pada tombol
+            $("#submitBtn").click(function() {
+                //ambil nilai input 
+                var inputValue = $("#inputField").val();
+
+                //kirim permintaan Ajax
+                $.ajax({
+                    type: "POST",
+                    url:<?php echo base_url('home')?>, // Ganti dengan URL endpoint yang tepat
+                    data: formData, // Data yang ingin Anda kirim
+                    success: function(response) {
+                        // Tanggapan berhasil
+                        console.log("Data berhasil disimpan:", response);
+                    },
+                    error: function() {
+                        // Tanggapan gagal
+                        console.error("Gagal menyimpan data.");
+                    }
+
+                });
+
+            });
+        });
+    </script>
 
 </head>
 
 <body>
-    <?php 
-    
+    <?php
+
     ?>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -51,8 +78,7 @@ include 'application/controllers/logic.php';
     <!-- navbar end -->
 
     <!-- content -->
-    <form action="<?php echo base_url('logic/logicc')?>" method="POST" onsubmit="return validateForm()"
-        >
+    <form action="<?php echo base_url('logic/logicc') ?>" method="POST" onsubmit="return validateForm()">
         <div class="container-lg">
             <h3>Tambahkan Data Preflight Checklist</h3>
             <div class="table-responsive">
@@ -448,9 +474,9 @@ include 'application/controllers/logic.php';
                     <div class="position-absolute top-100 start-50 translate-middle">
                         <!-- <button type="submit" class="btn btn-success" formaction="index.php">Simpan</button> -->
                         <!-- <button type="button" class="btn btn-danger">Keluar</button> -->
-                        <button type="submit"  class="btn btn-success" name="bsimpan">Simpan</button>
+                        <button type="submit" class="btn btn-success" name="bsimpan" id="submitBtn">Simpan</button>
                         <!-- <a href="" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true" name="bsimpan">Simpan</a> -->
-                        <a href="<?php echo base_url('home')?>" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Keluar</a>
+                        <a href="<?php echo base_url('home') ?>" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Keluar</a>
                     </div>
                 </div>
             </div>
