@@ -24,34 +24,6 @@ include 'application/controllers/logic.php';
         }
     </script>
 
-    <script src="<?php echo base_url('home') ?>"></script>
-
-    <script>
-        $(documnet).ready(function() {
-            //memebrikan event click pada tombol
-            $("#submitBtn").click(function() {
-                //ambil nilai input 
-                var inputValue = $("#inputField").val();
-
-                //kirim permintaan Ajax
-                $.ajax({
-                    type: "POST",
-                    url:<?php echo base_url('home')?>, // Ganti dengan URL endpoint yang tepat
-                    data: formData, // Data yang ingin Anda kirim
-                    success: function(response) {
-                        // Tanggapan berhasil
-                        console.log("Data berhasil disimpan:", response);
-                    },
-                    error: function() {
-                        // Tanggapan gagal
-                        console.error("Gagal menyimpan data.");
-                    }
-
-                });
-
-            });
-        });
-    </script>
 
 </head>
 
@@ -476,7 +448,7 @@ include 'application/controllers/logic.php';
                         <!-- <button type="button" class="btn btn-danger">Keluar</button> -->
                         <button type="submit" class="btn btn-success" name="bsimpan" id="submitBtn">Simpan</button>
                         <!-- <a href="" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true" name="bsimpan">Simpan</a> -->
-                        <a href="<?php echo base_url('home') ?>" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Keluar</a>
+                        <a href="<?php echo base_url('home') ?>" class="btn btn-danger" tabindex="-1" id="close" role="button" aria-disabled="true">Keluar</a>
                     </div>
                 </div>
             </div>
@@ -514,6 +486,34 @@ include 'application/controllers/logic.php';
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Menggunakan ID sebagai selector untuk menangkap klik tombol
+            $("#close").click(function(event) {
+                // Mencegah aksi bawaan dari tautan (pindah ke halaman baru)
+                event.preventDefault();
+                // Mendapatkan URL dari atribut href
+                var url = $(this).attr("href");
+                // Menggunakan metode AJAX untuk memuat konten dari halaman tujuan
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    success: function(response) {
+                        // Menambahkan konten halaman yang dimuat ke dalam konten halaman saat ini
+                        $("body").html(response);
+                        // Menggulir halaman ke atas (opsional)
+                        window.scrollTo(0, 0);
+                    },
+                    error: function(xhr, status, error) {
+                        // Menangani kesalahan jika permintaan AJAX gagal
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>

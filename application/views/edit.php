@@ -1,8 +1,6 @@
 <?php
-
 // buat koneksi database
 include "koneksi.php";
-
 ?>
 
 <html>

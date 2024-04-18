@@ -200,7 +200,7 @@ include "koneksi.php";
 
                 ?>
                 <div class="table-responsive">
-                    <table class="table">
+                    <table class="table table-responsive">
                         <img src="<?php echo base_url('/assets/img/ppp.png'); ?>" style="width: 20%; margin-left: 40%; " class="rounded">
                         <tr>
                             <td colspan="12" style="text-align: center;">PREFLIGHT CHECKLIST</td>

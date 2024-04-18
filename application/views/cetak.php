@@ -202,10 +202,10 @@ include "koneksi.php";
 
     <table>
         <tr>
-            <img src='<?php echo base_url('/assets/img/ppp.png')?>' style="width: 18%; margin-left: 40%; " class="rounded">
+            <img src='<?php echo base_url('/assets/img/ppp.png')?>' style="width: 20%; margin-left: 40%; " class="rounded">
         </tr>
         <tr>
-            <td colspan="12" rowspan="2" style="font-size: 15px; text-align:center">PREFLIGHT CHECKLIST</td>
+            <td colspan="12" rowspan="2" style="font-size: 15px; text-align:center"><b>PREFLIGHT CHECKLIST</b></td>
         </tr>
         <tr><br></tr>
         <tr><br></tr>

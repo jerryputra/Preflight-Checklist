@@ -43,7 +43,7 @@ $this->load->helper('url');
     <div class="container-fluid">
 
         <!-- Button trigger modal -->
-        <a id="myButton" href="<?php echo base_url('inputData')?>" onclick="tambahdata()">
+        <a id="myButton" href="<?php echo base_url('inputData') ?>">
             <button type="button" class="btn btn-primary">
                 Tambahkan Data
             </button>
@@ -81,7 +81,7 @@ $this->load->helper('url');
                         <td><?= $data['dep'] ?></td>
                         <td>
                             <a href="<?php echo base_url('view') ?>?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-info">View</a>
-                            <a href="<?php echo base_url('edit') ?>?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-warning">Edit</a>
+                            <a href="<?php echo base_url('edit') ?>?hal=edit&id=<?= $data['id_flight'] ?>" class="btn btn-warning edit-link">Edit</a>
                             <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $no ?>">Hapus</a>
                         </td>
                     </tr>
@@ -185,16 +185,66 @@ $this->load->helper('url');
 
 
 
+    <!-- Include jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
-        function tambahdata() {
-            $.get("<?php echo base_url('inputData')?>", function(data) {
-                $("myButton").html(data);
-                alert("Load was performed.");
+        $(document).ready(function() {
+            // Menggunakan ID sebagai selector untuk menangkap klik tombol
+            $("#myButton").click(function(event) {
+                // Mencegah aksi bawaan dari tautan (pindah ke halaman baru)
+                event.preventDefault();
+                // Mendapatkan URL dari atribut href
+                var url = $(this).attr("href");
+                // Menggunakan metode AJAX untuk memuat konten dari halaman tujuan
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    success: function(response) {
+                        // Menambahkan konten halaman yang dimuat ke dalam konten halaman saat ini
+                        $("body").html(response);
+                        // Menggulir halaman ke atas (opsional)
+                        window.scrollTo(0, 0);
+                    },
+                    error: function(xhr, status, error) {
+                        // Menangani kesalahan jika permintaan AJAX gagal
+                        console.error(xhr.responseText);
+                    }
+                });
             });
-        }
+        });
     </script>
+
+
+    <script>
+        $(document).ready(function() {
+            // Menangkap klik pada tombol Edit
+            $(".edit-link").click(function(event) {
+                // Mencegah tautan bawaan (pindah ke halaman baru)
+                event.preventDefault();
+                // Mendapatkan URL dari atribut href
+                var url = $(this).attr("href");
+                // Menggunakan metode AJAX untuk memuat konten dari halaman tujuan
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    success: function(response) {
+                        // Menambahkan konten halaman yang dimuat ke dalam konten halaman saat ini
+                        $("body").html(response);
+                        // Menggulir halaman ke atas (opsional)
+                        window.scrollTo(0, 0);
+                    },
+                    error: function(xhr, status, error) {
+                        // Menangani kesalahan jika permintaan AJAX gagal
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
