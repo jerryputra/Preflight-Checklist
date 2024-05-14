@@ -11,7 +11,7 @@ include "koneksi.php";
     <title>View Data</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href='<?php echo base_url('/assets/style.css')?>'>
+    <link rel="stylesheet" href='<?php echo base_url('/assets/style.css') ?>'>
 
 </head>
 
@@ -200,7 +200,7 @@ include "koneksi.php";
 
                 ?>
                 <div class="table-responsive">
-                    <table class="table table-responsive">
+                    <table class="table table-responsive    ">
                         <img src="<?php echo base_url('/assets/img/ppp.png'); ?>" style="width: 20%; margin-left: 40%; " class="rounded">
                         <tr>
                             <td colspan="12" style="text-align: center;">PREFLIGHT CHECKLIST</td>
@@ -209,7 +209,7 @@ include "koneksi.php";
                             <td colspan="3" style="font-size: 14px; text-align:right;">FLT. NO: IP <input type="text" class="border-0" value="<?= $data['flt'] ?>" readonly></td>
                             <td colspan="3" style="font-size: 14px; text-align:right;">A/C REG.: PK - <input type="text" class="border-0" value="<?= $data['reg'] ?>" readonly></td>
                             <td colspan="3" style="font-size: 14px; text-align:right;">DATE: <input type="text" class="border-0" value="<?= $data['date'] ?>" readonly></td>
-                            <td colspan="3" style="font-size: 14px; text-align:right;">DEP. A/P: <input type="text" class="border-0" value="<?= $data['dep'] ?>"readonly></td>
+                            <td colspan="3" style="font-size: 14px; text-align:right;">DEP. A/P: <input type="text" class="border-0" value="<?= $data['dep'] ?>" readonly></td>
                         </tr>
                     </table>
 
@@ -233,7 +233,7 @@ include "koneksi.php";
                             <tr>
                                 <td>Lav Smoke Detector</td>
                                 <td><input type="number" name="qty" id="emer2" value="<?= $data['Quanty'] ?>" style="margin-left: 5px;"></td>
-                                <td><input type="checkbox" name="s_status" id="checkbox" value="1" <?php echo $s_status == 1 ? 'checked' : '';?>></td>
+                                <td><input type="checkbox" name="s_status" id="checkbox" value="1" <?php echo $s_status == 1 ? 'checked' : ''; ?>></td>
                                 <td><input type="checkbox" name="us_status" id="checkbox" value="1" <?php echo $us_status == 1 ? 'checked' : ''; ?>></td>
                                 <td><input type="text" name="remark1" id="emer5" value="<?= $data['remark1'] ?>" style="margin-left: 5px;" readonly></td>
                                 <td><input type="checkbox" name="s_status2" id="checkbox" value="1" <?php echo $s_status2 == 1 ? 'checked' : ''; ?>></td>
@@ -292,7 +292,7 @@ include "koneksi.php";
                             </tr>
                             <tr>
                                 <td>Flashlight</td>
-                                <td><input type="number" name="qty6" value="<?= $data['Quanty7'] ?>" style="margin-left: 5px;"></td>
+                                <td><input type="number" name="qty6" value="<?= $data['Quanty7'] ?>" style="margin-left: 5px;" defaultValue=""></td>
                                 <td><input type="checkbox" name="s_status13" id="checkbox" value="1" <?php echo $s_status13 == 1 ? 'checked' : ''; ?>></td>
                                 <td><input type="checkbox" name="us_status13" id="checkbox" value="1" <?php echo $us_status13 == 1 ? 'checked' : ''; ?>></td>
                                 <td><input type="text" name="remark13" id="emer15" value="<?= $data['remark13'] ?>" style="margin-left: 5px;" readonly></td>
@@ -563,7 +563,7 @@ include "koneksi.php";
                         <br>
                         <br>
                         <br>
-                        <br>                                        
+                        <br>
                     </div>
 
                 </div>
@@ -580,6 +580,8 @@ include "koneksi.php";
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

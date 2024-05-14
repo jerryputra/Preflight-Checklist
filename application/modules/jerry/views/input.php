@@ -2,7 +2,7 @@
 
 // buat koneksi database
 include "koneksi.php";
-include 'application/controllers/logic.php';
+include 'application\modules\jerry\controllers\logic.php';
 
 ?>
 
@@ -50,7 +50,7 @@ include 'application/controllers/logic.php';
     <!-- navbar end -->
 
     <!-- content -->
-    <form action="<?php echo base_url('logic/logicc') ?>" method="POST" onsubmit="return validateForm()">
+    <form action="<?php echo base_url('jerry/logic/logicc') ?>" method="POST" onsubmit="return validateForm()">
         <div class="container-lg">
             <h3>Tambahkan Data Preflight Checklist</h3>
             <div class="table-responsive">
@@ -115,7 +115,7 @@ include 'application/controllers/logic.php';
                     </tr>
                     <tr>
                         <td>Lav Smoke Detector</td>
-                        <td><input type="number" name="qty" id="emer2" value="" style="margin-left: 5px;"></td>
+                        <td><input type="number" name="qty" id="emer2" value="" style="margin-left: 5px;" ></td>
                         <td><input type="checkbox" name="s_status" id="checkbox" value=""></td>
                         <td><input type="checkbox" name="us_status" id="checkbox" value=""></td>
                         <td><input type="text" name="remark1" id="emer5" value="" style="margin-left: 5px;"></td>
@@ -175,7 +175,7 @@ include 'application/controllers/logic.php';
                     </tr>
                     <tr>
                         <td>Flashlight</td>
-                        <td><input type="number" name="qty6" value="" style="margin-left: 5px;"></td>
+                        <td><input type="number" name="qty6" style="margin-left: 5px;" placeholder=""></td>
                         <td><input type="checkbox" name="s_status13" id="checkbox" value=""></td>
                         <td><input type="checkbox" name="us_status13" id="checkbox" value=""></td>
                         <td><input type="text" name="remark13" id="emer15" value="" style="margin-left: 5px;"></td>

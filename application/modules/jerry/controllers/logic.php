@@ -507,12 +507,12 @@ class logic extends CI_Controller
             if ($hapus) {
                 echo "<script>
                 alert('Hapus data sukses!');
-                document.location='index.php';
+                window.location.href = '" . base_url('home') . "';
              </script>";
             } else {
                 echo "<script>
                 alert('Hapus data gagal!');
-                document.location='index.php';
+                window.location.href = '" . base_url('home') . "';
              </script>";
             }
 
@@ -522,7 +522,7 @@ class logic extends CI_Controller
             // $this->session->set_flashdata('success_message', 'Data berhasil ditambahkan.');
 
             // Redirect kembali ke halaman utama
-            redirect(base_url('/pages/view'));
+            // redirect(base_url('/pages/view'));
         }
     }
 
@@ -894,12 +894,12 @@ class logic extends CI_Controller
 
             if ($ubah) {
                 echo "<script>
-                alert('Ubah data sukses!');
+                alert('Edit data sukses!');
                 window.location.href = '" . base_url('home') . "';
                 </script>";
             } else {
                 echo "<script>
-                alert('Ubah data gagal!');
+                alert('Edit data gagal!');
                 window.location.href = '" . base_url('home') . "';
                 </script>";
             }

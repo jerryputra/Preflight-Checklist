@@ -148,7 +148,7 @@ $this->load->helper('url');
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Konfirmasi Hapus Data Preflight Checklist</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <form method="POST" action="<?php echo base_url('logic/logicc') ?>">
+                                <form method="POST" action="<?php echo base_url('jerry/logic/logicc') ?>">
                                     <input type="hidden" name="id_flight" value="<?= $data['id_flight'] ?>">
                                     <div class="modal-body">
 
@@ -164,7 +164,6 @@ $this->load->helper('url');
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Exit</button>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     </div>

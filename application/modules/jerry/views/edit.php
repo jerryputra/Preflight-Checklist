@@ -58,7 +58,7 @@ include "koneksi.php";
         ?>
 
 
-        <form action="<?php echo base_url('logic/edit'); ?>" method="POST">
+        <form action="<?php echo base_url('jerry/logic/edit'); ?>" method="POST">
             <input type="hidden" name="id_flight" value="<?= $data['id_flight'] ?>">
             <div class="container-lg">
                 <h3>Edit Data Preflight Checklist</h3>
@@ -797,9 +797,9 @@ include "koneksi.php";
                         <div class="position-absolute top-100 start-50 translate-middle">
                             <!-- <button type="submit" class="btn btn-success" formaction="index.php">Simpan</button> -->
                             <!-- <button type="button" class="btn btn-danger">Keluar</button> -->
-                            <button type="submit" class="btn btn-success" name="bubah">Simpan</button>
+                            <button type="submit" id="Bubah" class="btn btn-success" name="bubah">Simpan</button>
                             <!-- <a href="" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true" name="bsimpan">Simpan</a> -->
-                            <a href="<?php echo base_url('home') ?>" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Keluar</a>
+                            <a href="<?php echo base_url('home') ?>" class="btn btn-danger" tabindex="-1" role="button" id="close" aria-disabled="true">Keluar</a>
 
                         </div>
                     </div>
@@ -813,7 +813,34 @@ include "koneksi.php";
 
     <!-- content end -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            // Menggunakan ID sebagai selector untuk menangkap klik tombol
+            $("#close").click(function(event) {
+                // Mencegah aksi bawaan dari tautan (pindah ke halaman baru)
+                event.preventDefault();
+                // Mendapatkan URL dari atribut href
+                var url = $(this).attr("href");
+                // Menggunakan metode AJAX untuk memuat konten dari halaman tujuan
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    success: function(response) {
+                        // Menambahkan konten halaman yang dimuat ke dalam konten halaman saat ini
+                        $("body").html(response);
+                        // Menggulir halaman ke atas (opsional)
+                        window.scrollTo(0, 0);
+                    },
+                    error: function(xhr, status, error) {
+                        // Menangani kesalahan jika permintaan AJAX gagal
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
 
 
 
