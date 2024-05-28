@@ -554,12 +554,14 @@ class logic extends CI_Controller
             $tdate = $_POST['tdate'];
             $tdep = $_POST['tdep'];
 
+
             // Cek apakah checkbox 'emergency' dicentang atau tidak
             //  $is_checked = isset($_POST["is_checked"]) ? 1 : 0;
 
             $quantyValue = $_POST['qty'];
 
-            $s_status = isset($_POST['s_status']) ? $_POST['s_status'] : ''; // Menggunakan isset() untuk memeriksa keberadaan indeks 's_status'
+
+            $s_status = isset($_POST['s_status']) ? $_POST['s_status'] : 'null'; // Menggunakan isset() untuk memeriksa keberadaan indeks 's_status'
             $us_status = isset($_POST["us_status"]) && $_POST['us_status'] != '' ? 1 : 0;
             $s_status2 = isset($_POST['s_status2']) ? 1 : 0; // Jika checkbox tercentang, nilainya 1; jika tidak, nilainya 0
             $us_status2 = isset($_POST["us_status2"]) ? 1 : 0;
@@ -847,6 +849,8 @@ class logic extends CI_Controller
 
 
 
+
+
             // Melakukan sanitasi terhadap data yang akan dimasukkan ke dalam query SQL
             $tflt = mysqli_real_escape_string($koneksi, $tflt);
             $treg = mysqli_real_escape_string($koneksi, $treg);
@@ -857,41 +861,42 @@ class logic extends CI_Controller
             // persiapan ubah data
             $ubah = mysqli_query($koneksi, "UPDATE title_flight SET 
                                                         flt = '$_POST[tflt]', reg = '$_POST[treg]', date = '$_POST[tdate]', dep = '$_POST[tdep]',
-                                                        Quanty  = '$_POST[qty]',   S = '$_POST[s_status]',   US = '$_POST[us_status]',  remark1 = '$_POST[remark1]', S2 = '$_POST[s_status2]', US2 = '$_POST[us_status2]', remark2 = '$_POST[remark2]',
-                                                        Quanty2 = '$_POST[qty1]', S3 = '$_POST[s_status3]', US3 = '$_POST[us_status3]', remark3 = '$_POST[remark3]', S4 = '$_POST[s_status4]', US4 = '$_POST[us_status4]', remark4 = '$_POST[remark4]',
-                                                        Quanty3 = '$_POST[qty2]', S5 = '$_POST[s_status5]', US5 = '$_POST[us_status5]', remark5 = '$_POST[remark5]', S6 = '$_POST[s_status6]', US6 = '$_POST[us_status6]', remark6 = '$_POST[remark6]',
-                                                        Quanty4 = '$_POST[qty3]', S7 = '$_POST[s_status7]', US7 = '$_POST[us_status7]', remark7 = '$_POST[remark7]', S8 = '$_POST[s_status8]', US8 = '$_POST[us_status8]', remark8 = '$_POST[remark8]',
-                                                        Quanty5 = '$_POST[qty4]', S9 = '$_POST[s_status9]', US9 = '$_POST[us_status9]', remark9 = '$_POST[remark9]', S10 = '$_POST[s_status10]', US10 = '$_POST[us_status10]', remark10 = '$_POST[remark10]',
-                                                        Quanty6 = '$_POST[qty5]', S11 = '$_POST[s_status11]', US11 = '$_POST[us_status11]', remark11 = '$_POST[remark11]', S12 = '$_POST[s_status12]', US12 = '$_POST[us_status12]', remark12 = '$_POST[remark12]',
-                                                        Quanty7 = '$_POST[qty6]', S13 = '$_POST[s_status13]', US13 = '$_POST[us_status13]', remark13 = '$_POST[remark13]', S14 = '$_POST[s_status14]', US14 = '$_POST[us_status14]', remark14 = '$_POST[remark14]',
-                                                        Quanty8 = '$_POST[qty7]', S15 = '$_POST[s_status15]', US15 = '$_POST[us_status15]', remark15 = '$_POST[remark15]', S16 = '$_POST[s_status16]', US16 = '$_POST[us_status16]', remark16 = '$_POST[remark16]',
-                                                        Quanty9 = '$_POST[qty8]', S17 = '$_POST[s_status17]', US17 = '$_POST[us_status17]', remark17 = '$_POST[remark17]', S18 = '$_POST[s_status18]', US18 = '$_POST[us_status18]', remark18 = '$_POST[remark18]',
-                                                        Quanty10 = '$_POST[qty9]', S19 = '$_POST[s_status19]', US19 = '$_POST[us_status19]', remark19 = '$_POST[remark19]', S20 = '$_POST[s_status20]', US20 = '$_POST[us_status20]', remark20 = '$_POST[remark20]',
-                                                        Quanty11 = '$_POST[qty10]', S21 = '$_POST[s_status21]', US21 = '$_POST[us_status21]', remark21 = '$_POST[remark21]', S22 = '$_POST[s_status22]', US22 = '$_POST[us_status22]', remark22 = '$_POST[remark22]',
-                                                        Quanty12 = '$_POST[qty11]', S23 = '$_POST[s_status23]', US23 = '$_POST[us_status23]', remark23 = '$_POST[remark23]', S24 = '$_POST[s_status24]', US24 = '$_POST[us_status24]', remark24 = '$_POST[remark24]',
-                                                        Quanty13 = '$_POST[qty12]', S25 = '$_POST[s_status25]', US25 = '$_POST[us_status25]', remark25 = '$_POST[remark25]', S26 = '$_POST[s_status26]', US26 = '$_POST[us_status26]', remark26 = '$_POST[remark26]',
-                                                        Quanty14 = '$_POST[qty13]', S27 = '$_POST[s_status27]', US27 = '$_POST[us_status27]', remark27 = '$_POST[remark27]', S28 = '$_POST[s_status28]', US28 = '$_POST[us_status28]', remark28 = '$_POST[remark28]',
-                                                        Quanty15 = '$_POST[qty14]', S29 = '$_POST[s_status29]', US29 = '$_POST[us_status29]', remark29 = '$_POST[remark29]', S30 = '$_POST[s_status30]', US30 = '$_POST[us_status30]', remark30 = '$_POST[remark30]',
-                                                        Quanty16 = '$_POST[qty15]', S31 = '$_POST[s_status31]', US31 = '$_POST[us_status31]', remark31 = '$_POST[remark31]', S32 = '$_POST[s_status32]', US32 = '$_POST[us_status32]', remark32 = '$_POST[remark32]',
-                                                        Quanty17 = '$_POST[qty16]', S33 = '$_POST[s_status33]', US33 = '$_POST[us_status33]', remark33 = '$_POST[remark33]', S34 = '$_POST[s_status34]', US34 = '$_POST[us_status34]', remark34 = '$_POST[remark34]',
-                                                        Quanty18 = '$_POST[qty17]', S35 = '$_POST[s_status35]', US35 = '$_POST[us_status35]', remark35 = '$_POST[remark35]', S36 = '$_POST[s_status36]', US36 = '$_POST[us_status36]', remark36 = '$_POST[remark36]',
-                                                        Quanty19 = '$_POST[qty18]', S37 = '$_POST[s_status37]', US37 = '$_POST[us_status37]', remark37 = '$_POST[remark37]', S38 = '$_POST[s_status38]', US38 = '$_POST[us_status38]', remark38 = '$_POST[remark38]',
-                                                        Quanty20 = '$_POST[qty19]', S39 = '$_POST[s_status39]', US39 = '$_POST[us_status39]', remark39 = '$_POST[remark39]', S40 = '$_POST[s_status40]', US40 = '$_POST[us_status40]', remark40 = '$_POST[remark40]',
-                                                        Quanty21 = '$_POST[qty20]', S41 = '$_POST[s_status41]', US41 = '$_POST[us_status41]', remark41 = '$_POST[remark41]', S42 = '$_POST[s_status42]', US42 = '$_POST[us_status42]', remark42 = '$_POST[remark42]',
-                                                        Quanty22 = '$_POST[qty21]', S43 = '$_POST[s_status43]', US43 = '$_POST[us_status43]', remark43 = '$_POST[remark43]', S44 = '$_POST[s_status44]', US44 = '$_POST[us_status44]', remark44 = '$_POST[remark44]',
-                                                        Quanty23 = '$_POST[qty22]', S45 = '$_POST[s_status45]', US45 = '$_POST[us_status45]', remark45 = '$_POST[remark45]', S46 = '$_POST[s_status46]', US46 = '$_POST[us_status46]', remark46 = '$_POST[remark46]',
-                                                        Quanty24 = '$_POST[qty23]', S47 = '$_POST[s_status47]', US47 = '$_POST[us_status47]', remark47 = '$_POST[remark47]', S48 = '$_POST[s_status48]', US48 = '$_POST[us_status48]', remark48 = '$_POST[remark48]',
-                                                        Quanty25 = '$_POST[qty24]', S49 = '$_POST[s_status49]', US49 = '$_POST[us_status49]', remark49 = '$_POST[remark49]', S50 = '$_POST[s_status50]', US50 = '$_POST[us_status50]', remark50 = '$_POST[remark50]',
-                                                        Quanty26 = '$_POST[qty25]', S51 = '$_POST[s_status51]', US51 = '$_POST[us_status51]', remark51 = '$_POST[remark51]', S52 = '$_POST[s_status52]', US52 = '$_POST[us_status52]', remark52 = '$_POST[remark52]',
-                                                        Quanty27 = '$_POST[qty26]', S53 = '$_POST[s_status53]', US53 = '$_POST[us_status53]', remark53 = '$_POST[remark53]', S54 = '$_POST[s_status54]', US54 = '$_POST[us_status54]', remark54 = '$_POST[remark54]',
-                                                        Quanty28 = '$_POST[qty27]', S55 = '$_POST[s_status55]', US55 = '$_POST[us_status55]', remark55 = '$_POST[remark55]', S56 = '$_POST[s_status56]', US56 = '$_POST[us_status56]', remark56 = '$_POST[remark56]',
-                                                        Quanty29 = '$_POST[qty28]', S57 = '$_POST[s_status57]', US57 = '$_POST[us_status57]', remark57 = '$_POST[remark57]', S58 = '$_POST[s_status58]', US58 = '$_POST[us_status58]', remark58 = '$_POST[remark58]',
-                                                        Quanty30 = '$_POST[qty29]', S59 = '$_POST[s_status59]', US59 = '$_POST[us_status59]', remark59 = '$_POST[remark59]', S60 = '$_POST[s_status60]', US60 = '$_POST[us_status60]', remark60 = '$_POST[remark60]',
-                                                        Quanty31 = '$_POST[qty30]', S61 = '$_POST[s_status61]', US61 = '$_POST[us_status61]', remark61 = '$_POST[remark61]', S62 = '$_POST[s_status62]', US62 = '$_POST[us_status62]', remark62 = '$_POST[remark62]',
-                                                        Quanty32 = '$_POST[qty31]', S63 = '$_POST[s_status63]', US63 = '$_POST[us_status63]', remark63 = '$_POST[remark63]', S64 = '$_POST[s_status64]', US64 = '$_POST[us_status64]', remark64 = '$_POST[remark64]'
+                                                        Quanty  = '$_POST[qty]',   S = '$s_status',   US = '$us_status',  remark1 = '$_POST[remark1]', S2 = '$s_status2', US2 = '$us_status2', remark2 = '$_POST[remark2]',
+                                                        Quanty2 = '$_POST[qty1]', S3 = '$s_status3', US3 = '$us_status3', remark3 = '$_POST[remark3]', S4 = '$s_status4', US4 = '$us_status4', remark4 = '$_POST[remark4]',
+                                                        Quanty3 = '$_POST[qty2]', S5 = '$s_status5', US5 = '$us_status5', remark5 = '$_POST[remark5]', S6 = '$s_status6', US6 = '$us_status6', remark6 = '$_POST[remark6]',
+                                                        Quanty4 = '$_POST[qty3]', S7 = '$s_status7', US7 = '$us_status7', remark7 = '$_POST[remark7]', S8 = '$s_status8', US8 = '$us_status8', remark8 = '$_POST[remark8]',
+                                                        Quanty5 = '$_POST[qty4]', S9 = '$s_status9', US9 = '$us_status9', remark9 = '$_POST[remark9]', S10 = '$s_status10', US10 = '$us_status10', remark10 = '$_POST[remark10]',
+                                                        Quanty6 = '$_POST[qty5]', S11 = '$s_status11', US11 = '$us_status11', remark11 = '$_POST[remark11]', S12 = '$s_status12', US12 = '$us_status12', remark12 = '$_POST[remark12]',
+                                                        Quanty7 = '$_POST[qty6]', S13 = '$s_status13', US13 = '$us_status13', remark13 = '$_POST[remark13]', S14 = '$s_status14', US14 = '$us_status14', remark14 = '$_POST[remark14]',
+                                                        Quanty8 = '$_POST[qty7]', S15 = '$s_status15', US15 = '$us_status15', remark15 = '$_POST[remark15]', S16 = '$s_status16', US16 = '$us_status16', remark16 = '$_POST[remark16]',
+                                                        Quanty9 = '$_POST[qty8]', S17 = '$s_status17', US17 = '$us_status17', remark17 = '$_POST[remark17]', S18 = '$s_status18', US18 = '$us_status18', remark18 = '$_POST[remark18]',
+                                                        Quanty10 = '$_POST[qty9]', S19 = '$s_status19', US19 = '$us_status19', remark19 = '$_POST[remark19]', S20 = '$s_status20', US20 = '$us_status20', remark20 = '$_POST[remark20]',
+                                                        Quanty11 = '$_POST[qty10]', S21 = '$s_status21', US21 = '$us_status21', remark21 = '$_POST[remark21]', S22 = '$s_status22', US22 = '$us_status22', remark22 = '$_POST[remark22]',
+                                                        Quanty12 = '$_POST[qty11]', S23 = '$s_status23', US23 = '$us_status23', remark23 = '$_POST[remark23]', S24 = '$s_status24', US24 = '$us_status24', remark24 = '$_POST[remark24]',
+                                                        Quanty13 = '$_POST[qty12]', S25 = '$s_status25', US25 = '$us_status25', remark25 = '$_POST[remark25]', S26 = '$s_status26', US26 = '$us_status26', remark26 = '$_POST[remark26]',
+                                                        Quanty14 = '$_POST[qty13]', S27 = '$s_status27', US27 = '$us_status27', remark27 = '$_POST[remark27]', S28 = '$s_status28', US28 = '$us_status28', remark28 = '$_POST[remark28]',
+                                                        Quanty15 = '$_POST[qty14]', S29 = '$s_status29', US29 = '$us_status29', remark29 = '$_POST[remark29]', S30 = '$s_status30', US30 = '$us_status30', remark30 = '$_POST[remark30]',
+                                                        Quanty16 = '$_POST[qty15]', S31 = '$s_status31', US31 = '$us_status31', remark31 = '$_POST[remark31]', S32 = '$s_status32', US32 = '$us_status32', remark32 = '$_POST[remark32]',
+                                                        Quanty17 = '$_POST[qty16]', S33 = '$s_status33', US33 = '$us_status33', remark33 = '$_POST[remark33]', S34 = '$s_status34', US34 = '$us_status34', remark34 = '$_POST[remark34]',
+                                                        Quanty18 = '$_POST[qty17]', S35 = '$s_status35', US35 = '$us_status35', remark35 = '$_POST[remark35]', S36 = '$s_status36', US36 = '$us_status36', remark36 = '$_POST[remark36]',
+                                                        Quanty19 = '$_POST[qty18]', S37 = '$s_status37', US37 = '$us_status37', remark37 = '$_POST[remark37]', S38 = '$s_status38', US38 = '$us_status38', remark38 = '$_POST[remark38]',
+                                                        Quanty20 = '$_POST[qty19]', S39 = '$s_status39', US39 = '$us_status39', remark39 = '$_POST[remark39]', S40 = '$s_status40', US40 = '$us_status40', remark40 = '$_POST[remark40]',
+                                                        Quanty21 = '$_POST[qty20]', S41 = '$s_status41', US41 = '$us_status41', remark41 = '$_POST[remark41]', S42 = '$s_status42', US42 = '$us_status42', remark42 = '$_POST[remark42]',
+                                                        Quanty22 = '$_POST[qty21]', S43 = '$s_status43', US43 = '$us_status43', remark43 = '$_POST[remark43]', S44 = '$s_status44', US44 = '$us_status44', remark44 = '$_POST[remark44]',
+                                                        Quanty23 = '$_POST[qty22]', S45 = '$s_status45', US45 = '$us_status45', remark45 = '$_POST[remark45]', S46 = '$s_status46', US46 = '$us_status46', remark46 = '$_POST[remark46]',
+                                                        Quanty24 = '$_POST[qty23]', S47 = '$s_status47', US47 = '$us_status47', remark47 = '$_POST[remark47]', S48 = '$s_status48', US48 = '$us_status48', remark48 = '$_POST[remark48]',
+                                                        Quanty25 = '$_POST[qty24]', S49 = '$s_status49', US49 = '$us_status49', remark49 = '$_POST[remark49]', S50 = '$s_status50', US50 = '$us_status50', remark50 = '$_POST[remark50]',
+                                                        Quanty26 = '$_POST[qty25]', S51 = '$s_status51', US51 = '$us_status51', remark51 = '$_POST[remark51]', S52 = '$s_status52', US52 = '$us_status52', remark52 = '$_POST[remark52]',
+                                                        Quanty27 = '$_POST[qty26]', S53 = '$s_status53', US53 = '$us_status53', remark53 = '$_POST[remark53]', S54 = '$s_status54', US54 = '$us_status54', remark54 = '$_POST[remark54]',
+                                                        Quanty28 = '$_POST[qty27]', S55 = '$s_status55', US55 = '$us_status55', remark55 = '$_POST[remark55]', S56 = '$s_status56', US56 = '$us_status56', remark56 = '$_POST[remark56]',
+                                                        Quanty29 = '$_POST[qty28]', S57 = '$s_status57', US57 = '$us_status57', remark57 = '$_POST[remark57]', S58 = '$s_status58', US58 = '$us_status58', remark58 = '$_POST[remark58]',
+                                                        Quanty30 = '$_POST[qty29]', S59 = '$s_status59', US59 = '$us_status59', remark59 = '$_POST[remark59]', S60 = '$s_status60', US60 = '$us_status60', remark60 = '$_POST[remark60]',
+                                                        Quanty31 = '$_POST[qty30]', S61 = '$s_status61', US61 = '$us_status61', remark61 = '$_POST[remark61]', S62 = '$s_status62', US62 = '$us_status62', remark62 = '$_POST[remark62]',
+                                                        Quanty32 = '$_POST[qty31]', S63 = '$s_status63', US63 = '$us_status63', remark63 = '$_POST[remark63]', S64 = '$s_status64', US64 = '$us_status64', remark64 = '$_POST[remark64]'
                                                 WHERE id_flight = '$_POST[id_flight]'
                                     ");
 
+                                                                                                                 
             if ($ubah) {
                 echo "<script>
                 alert('Edit data sukses!');
@@ -899,7 +904,7 @@ class logic extends CI_Controller
                 </script>";
             } else {
                 echo "<script>
-                alert('Edit data gagal!');
+                alert('Edit data Gagal!');
                 window.location.href = '" . base_url('home') . "';
                 </script>";
             }
@@ -918,7 +923,8 @@ class logic extends CI_Controller
 
 
 
-    public function download_document() {
+    public function download_document()
+    {
         // Menghasilkan konten HTML tampilan
         $html_content = $this->load->view('view', [], TRUE);
 

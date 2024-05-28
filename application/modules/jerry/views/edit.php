@@ -62,47 +62,7 @@ include "koneksi.php";
             <input type="hidden" name="id_flight" value="<?= $data['id_flight'] ?>">
             <div class="container-lg">
                 <h3>Edit Data Preflight Checklist</h3>
-                <!-- <div class="mb-3">
-                    <label class="form-label"><b>FLT. NO: IP</b></label>
-                    <input class="form-control" placeholder="Masukan Flight Number" name="tflt" value="<?= $data['flt'] ?>">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label"><b>A/C REG.: PK</b></label>
-                    <input class="form-control" placeholder="Masukan No Registrasi Pesawat" name="treg" value="<?= $data['reg'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label"><b>DATE</b></label>
-                    <input type="date" class="form-control" placeholder="" name="tdate" value="<?= $data['date'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label"><b>DEP. A/P</b></label>
-                    <input class="form-control" placeholder="Masukan Kode Departure" name="tdep" value="<?= $data['dep'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label"><b>PRE/POST FLIGHT</b></label>
-                    <select class="form-select form-select-sm mb-3" aria-label="Large select example" name="tprs" id="pilihan">
-                        <option selected>Pilihan</option>
-                        <?php
-                        // Misalnya, $options adalah array yang berisi data untuk dropdown
-                        $options = array('preflight', 'postflight');
-
-                        // $data['prepos'] adalah nilai yang akan dicocokkan dengan setiap opsi
-                        foreach ($options as $option) {
-                            // Cek apakah nilai saat ini sama dengan nilai dalam $data['prepos']
-                            $selected = ($option == $data['prepos']) ? 'selected' : '';
-
-                            // Tampilkan opsi dalam elemen dropdown
-                            echo '<option value="' . htmlspecialchars($option) . '" ' . $selected . '>' . htmlspecialchars($option) . '</option>';
-                        }
-                        ?>
-
-                    </select>
-                </div> -->
-
-                <!-- <div class="mb-3">
-                    <label class="form-label"><b>Emergency Equipment</b></label>
-                </div> -->
+                
                 <?php
 
                 // Mendapatkan data dari database
@@ -122,78 +82,6 @@ include "koneksi.php";
 
                 ?>
 
-                <!-- <div class="row mb-5">
-                    <div class="col-2">
-                        <label for="checkbox">
-                            <input type="checkbox" id="checkbox" name="is_checked" value="1" <?php echo $is_checked == 1 ? 'checked' : ''; ?> style="margin-left: 5px;"> Lav Smoke Detector</label>
-                    </div>
-                    <div class="col-3">
-                        <label for="emer2">
-                            Quanty <input type="number" name="qty20" value="<?= $data['Quanty'] ?>" style="margin-left: 5px;">
-                        </label>
-                    </div>
-                    <div class="col-1">
-                        <label for="checkbox">
-                            <input type="checkbox" name="s_status" id="checkbox" value="1" <?php echo $s_status == 1 ? 'checked' : ''; ?>> S</label>
-                    </div>
-                    <div class="col-1">
-                        <label for="checkbox">
-                            <input type="checkbox" name="us_status" id="checkbox" value="1" <?php echo $us_status == 1 ? 'checked' : ''; ?>> U/S</label>
-                    </div>
-                    <div class="col-3">
-                        <label for="emer5">
-                            Remark <input type="text" name="remark" id="emer5" value="<?= $data['remark'] ?>" style="margin-left: 5px;">
-                        </label>
-                    </div>
-                </div> -->
-                <!-- <div class="row mb-5">
-                    <div class="col-2">
-                        <label for="checkbox">
-                            <input type="checkbox" id="checkbox" name="is_checked" value="1" <?php echo $is_checked == 1 ? 'checked' : ''; ?> style="margin-left: 5px;"> Lav. Built in Firex</label>
-                    </div>
-                    <div class="col-3">
-                        <label for="emer2">
-                            Quanty <input type="number" name="qty20" value="<?= $data['Quanty'] ?>" style="margin-left: 5px;">
-                        </label>
-                    </div>
-                    <div class="col-1">
-                        <label for="checkbox">
-                            <input type="checkbox" name="s_status" id="checkbox" value="1" <?php echo $s_status == 1 ? 'checked' : ''; ?>> S</label>
-                    </div>
-                    <div class="col-1">
-                        <label for="checkbox">
-                            <input type="checkbox" name="us_status" id="checkbox" value="1"<?php echo $us_status == 1 ? 'checked' : ''; ?>> U/S</label>
-                    </div>
-                    <div class="col-3">
-                        <label for="emer5">
-                            Remark <input type="text" name="emergency" id="emer5" value="<?= $data['remark'] ?>" style="margin-left: 5px;">
-                        </label>
-                    </div>
-                </div> 
-                <div class="row mb-5">
-                    <div class="col-2">
-                        <label for="checkbox">
-                            <input type="checkbox" id="checkbox" name="is_checked" value="1" <?php echo $is_checked == 1 ? 'checked' : ''; ?> style="margin-left: 5px;"> Halon / BCF</label>
-                    </div>
-                    <div class="col-3">
-                        <label for="emer2">
-                            Quanty <input type="number" name="qty20" value="<?= $data['Quanty'] ?>" style="margin-left: 5px;">
-                        </label>
-                    </div>
-                    <div class="col-1">
-                        <label for="checkbox">
-                            <input type="checkbox" name="s_status" id="checkbox" value="1" <?php echo $s_status == 1 ? 'checked' : ''; ?>> S</label>
-                    </div>
-                    <div class="col-1">
-                        <label for="checkbox">
-                            <input type="checkbox" name="us_status" id="checkbox" value="1"<?php echo $us_status == 1 ? 'checked' : ''; ?>> U/S</label>
-                    </div>
-                    <div class="col-3">
-                        <label for="emer5">
-                            Remark <input type="text" name="emergency" id="emer5" value="<?= $data['remark'] ?>" style="margin-left: 5px;">
-                        </label>
-                    </div>
-                </div>  -->
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
