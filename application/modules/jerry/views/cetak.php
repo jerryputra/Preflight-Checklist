@@ -458,7 +458,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Lav Smoke Detector</td>
-            <td style="width: 20%; text-align: center;"><input type="number" name="qty" id="emer2" value="<?= $output ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" value=""></td>
+            <td style="width: 20%; text-align: center;"><input type="number" name="qty" id="emer2" value="<?= $output ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align: center;"><input style="vertical-align: middle;" type="checkbox" name="s_status" id="checkbox" value="1" <?php echo $s_status == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align: center;"><input style="vertical-align: middle;" type="checkbox" name="us_status" id="checkbox" value="1" <?php echo $us_status == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark1" id="emer5" value="<?= $data['remark1'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -468,7 +468,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Lav Build In Firex</td>
-            <td style="width: 20%; text-align: center;"><input type="number" name="qty1" id="emer3" value="<?= $output2 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align: center;"><input type="number" name="qty1" id="emer3" value="<?= $output2 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align: center;"><input style="vertical-align: middle;" type="checkbox" name="s_status3" id="checkbox" value="1" <?php echo $s_status3 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align: center;"><input style="vertical-align: middle;" type="checkbox" name="us_status3" id="checkbox" value="1" <?php echo $us_status3 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark3" id="emer6" value="<?= $data['remark3'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -478,7 +478,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Halon / BCF</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty2" value="<?= $output3 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty2" value="<?= $output3 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle" type="checkbox" name="s_status5" id="checkbox" value="1" <?php echo $s_status5 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align:middle" type="checkbox" name="us_status5" id="checkbox" value="1" <?php echo $us_status5 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark5" id="emer7" value="<?= $data['remark5'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -488,7 +488,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">H2O</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty3" value="<?= $output4 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" placeholder=""></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty3" value="<?= $output4 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" placeholder="" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status7" id="checkbox" value="1" <?php echo $s_status7 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%;text-align:center "><input style="vertical-align: middle;" type="checkbox" name="us_status7" id="checkbox" value="1" <?php echo $us_status7 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark7" id="emer9" value="<?= $data['remark7'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -498,7 +498,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Megaphone</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty4" value="<?= $output5 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty4" value="<?= $output5 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center;"><input style="vertical-align: middle;" type="checkbox" name="s_status9" id="checkbox" value="1" <?php echo $s_status9 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status9" id="checkbox" value="1" <?php echo $us_status9 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark9" id="emer11" value="<?= $data['remark9'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -508,7 +508,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Silde Raft/Escape Slide</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty5" value="<?= $output6 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty5" value="<?= $output6 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center;"><input style="vertical-align: middle;" type="checkbox" name="s_status11" id="checkbox" value="1" <?php echo $s_status11 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center;"><input style="vertical-align: middle;" type="checkbox" name="us_status11" id="checkbox" value="1" <?php echo $us_status11 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark11" id="emer13" value="<?= $data['remark11'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -518,7 +518,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Flashlight</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty6" value="<?= $output7 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty6" value="<?= $output7 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status13" id="checkbox" value="1" <?php echo $s_status13 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status13" id="checkbox" value="1" <?php echo $us_status13 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark13" id="emer15" value="<?= $data['remark13'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -528,7 +528,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">POB</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty7" value="<?= $output8 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty7" value="<?= $output8 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status15" id="checkbox" value="1" <?php echo $s_status15 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status15" id="checkbox" value="1" <?php echo $us_status15 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark15" id="emer16" value="<?= $data['remark15'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -538,7 +538,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Oxygen Mask</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty8" value="<?= $output9 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty8" value="<?= $output9 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status17" id="checkbox" value="1" <?php echo $s_status17 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status17" id="checkbox" value="1" <?php echo $us_status17 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark17" id="emer18" value="<?= $data['remark17'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -548,7 +548,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">PBE</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty9" value="<?= $output10 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty9" value="<?= $output10 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status19" id="checkbox" value="1" <?php echo $s_status19 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status19" id="checkbox" value="1" <?php echo $us_status19 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark19" id="emer20" value="<?= $data['remark19'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -558,7 +558,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Crew Life Vest</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty10" value="<?= $output11 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty10" value="<?= $output11 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status21" id="checkbox" value="1" <?php echo $s_status21 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status21" id="checkbox" value="1" <?php echo $us_status21 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark21" id="emer22" value="<?= $data['remark21'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -568,7 +568,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Passenger Life Vest</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty11" value="<?= $output12 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty11" value="<?= $output12 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status23" id="checkbox" value="1" <?php echo $s_status23 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status23" id="checkbox" value="1" <?php echo $us_status23 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark23" id="emer24" value="<?= $data['remark23'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -578,7 +578,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Spare Adult Life Vest</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty12" value="<?= $output13 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty12" value="<?= $output13 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status25" id="checkbox" value="1" <?php echo $s_status25 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status25" id="checkbox" value="1" <?php echo $us_status25 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark25" id="emer26" value="<?= $data['remark25'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -588,7 +588,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Infant Life Vest</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty13" value="<?= $output14 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty13" value="<?= $output14 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status27" id="checkbox" value="1" <?php echo $s_status27 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status27" id="checkbox" value="1" <?php echo $us_status27 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark27" id="emer28" value="<?= $data['remark27'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -598,7 +598,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Infant Seat Belt</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty14" value="<?= $output15 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty14" value="<?= $output15 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status29" id="checkbox" value="1" <?php echo $s_status29 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status29" id="checkbox" value="1" <?php echo $us_status29 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark29" id="emer30" value="<?= $data['remark29'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -608,7 +608,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Extension Seat Belt</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty15" value="<?= $output16 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty15" value="<?= $output16 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status31" id="checkbox" value="1" <?php echo $s_status31 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status31" id="checkbox" value="1" <?php echo $us_status31 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark31" id="emer32" value="<?= $data['remark31'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -618,7 +618,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Spare Seat Belt</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty16" value="<?= $output17 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty16" value="<?= $output17 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status33" id="checkbox" value="1" <?php echo $s_status33 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status33" id="checkbox" value="1" <?php echo $us_status33 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark33" id="emer34" value="<?= $data['remark33'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -628,7 +628,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Survival Kit</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty17" value="<?= $output18 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty17" value="<?= $output18 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status35" id="checkbox" value="1" <?php echo $s_status35 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status35" id="checkbox" value="1" <?php echo $us_status35 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark35" id="emer36" value="<?= $data['remark35'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -638,7 +638,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">ELT</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty18" value="<?= $output19 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty18" value="<?= $output19 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status37" id="checkbox" value="1" <?php echo $s_status37 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status37" id="checkbox" value="1" <?php echo $us_status37 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark37" id="emer38" value="<?= $data['remark37'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -648,7 +648,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Firts Aid Kit</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty19" value="<?= $output20 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty19" value="<?= $output20 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status39" id="checkbox" value="1" <?php echo $s_status39 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status39" id="checkbox" value="1" <?php echo $us_status39 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark39" id="emer40" value="<?= $data['remark39'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -658,7 +658,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">EMK</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty20" value="<?= $output21 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty20" value="<?= $output21 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status41" id="checkbox" value="1" <?php echo $s_status41 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status41" id="checkbox" value="1" <?php echo $us_status41 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: auto;"><input type="text" name="remark41" id="emer42" value="<?= $data['remark41'] ?>" style="margin-left: 5px;  border: none;" readonly></td>
@@ -668,7 +668,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Safety Demo Kit</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty21" value="<?= $output22 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty21" value="<?= $output22 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center;"><input style="vertical-align: middle;" type="checkbox" name="s_status43" id="checkbox" value="1" <?php echo $s_status43 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status43" id="checkbox" value="1" <?php echo $us_status43 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark43" id="emer44" value="<?= $data['remark43'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -678,7 +678,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Door Barrier Strap</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty22" value="<?= $output23 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty22" value="<?= $output23 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center;"><input style="vertical-align: middle;" type="checkbox" name="s_status45" id="checkbox" value="1" <?php echo $s_status45 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center;"><input style="vertical-align: middle;" type="checkbox" name="us_status45" id="checkbox" value="1" <?php echo $us_status45 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark45" id="emer46" value="<?= $data['remark45'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -688,7 +688,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Cabin Headset</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty23" value="<?= $output24 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty23" value="<?= $output24 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center;"><input type="checkbox" name="s_status47" id="checkbox" value="1" <?php echo $s_status47 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center;"><input type="checkbox" name="us_status47" id="checkbox" value="1" <?php echo $us_status47 ==  1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark47" id="emer49" value="<?= $data['remark47'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -698,7 +698,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Restraint Kit</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty24" value="<?= $output25 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty24" value="<?= $output25 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"readonly></td>
             <td style="width:5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status49" id="checkbox" value="1" <?php echo $s_status49 == 1 ? 'checked' : ''; ?>></td>
             <td style="width:5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status49" id="checkbox" value="1" <?php echo $us_status49 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark49" id="emer51" value="<?= $data['remark49'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -708,7 +708,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">MRT</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty25" id="emer2" value="<?= $output26 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty25" id="emer2" value="<?= $output26 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status51" id="checkbox" value="1" <?php echo $s_status51 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status51" id="checkbox" value="1" <?php echo $us_status51 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark51" id="emer53" value="<?= $data['remark51'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -718,7 +718,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">Fire Proof Gloves</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty26" id="emer2" value="<?= $output27 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty26" id="emer2" value="<?= $output27 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status53" id="checkbox" value="1" <?php echo $s_status53 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status53" id="checkbox" value="1" <?php echo $us_status53 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark53" id="emer55" value="<?= $data['remark53'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -728,7 +728,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width:30%; font-size:12px;">Life Line</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty27" id="emer2" value="<?= $output28 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty27" id="emer2" value="<?= $output28 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status55" id="checkbox" value="1" <?php echo $s_status55 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status55" id="checkbox" value="1" <?php echo $us_status55 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark55" id="emer57" value="<?= $data['remark55'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -738,7 +738,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width:30%; font-size:12px;">UPK</td>
-            <td style="width:20%; text-align:center"><input type="number" name="qty28" id="emer2" value="<?= $output29 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width:20%; text-align:center"><input type="number" name="qty28" id="emer2" value="<?= $output29 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status57" id="checkbox" value="1" <?php echo $s_status57 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status57" id="checkbox" value="1" <?php echo $us_status57 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark57" id="emer59" value="<?= $data['remark57'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -748,7 +748,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="width: 30%; font-size:12px;">DG Kit</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty29" id="emer2" value="<?= $output30 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty29" id="emer2" value="<?= $output30 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="s_status59" id="checkbox" value="1" <?php echo $s_status59 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status59" id="checkbox" value="1" <?php echo $us_status59 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark59" id="emer61" value="<?= $data['remark59'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -758,7 +758,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="font-size:12px; width:30%">Safety Instruction Card</td>
-            <td style="width:20%; text-align:center"><input type="number" name="qty30" id="emer2" value="<?= $output31 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;"></td>
+            <td style="width:20%; text-align:center"><input type="number" name="qty30" id="emer2" value="<?= $output31 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align:middle" type="checkbox" name="s_status61" id="checkbox" value="1" <?php echo $s_status61 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align: middle;" type="checkbox" name="us_status61" id="checkbox" value="1" <?php echo $us_status61 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark61" id="emer63" value="<?= $data['remark61'] ?>" style="margin-left: 5px;border: none;" readonly></td>
@@ -768,7 +768,7 @@ include "koneksi.php";
         </tr>
         <tr>
             <td style="font-size:12px; width:30%">Exit Row Seating Criteria</td>
-            <td style="width: 20%; text-align:center"><input type="number" name="qty31" id="emer2" value="<?= $output32 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" placeholder=""></td>
+            <td style="width: 20%; text-align:center"><input type="number" name="qty31" id="emer2" value="<?= $output32 ?>" style="width: 30px; border: none; text-align: center; margin: 0 auto;" placeholder="" readonly></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align:middle" type="checkbox" name="s_status63" id="checkbox" value="1" <?php echo $s_status63 == 1 ? 'checked' : ''; ?>></td>
             <td style="width: 5%; text-align:center"><input style="vertical-align:middle" type="checkbox" name="us_status63" id="checkbox" value="1" <?php echo $us_status63 == 1 ? 'checked' : ''; ?>></td>
             <td><input type="text" name="remark63" id="emer65" value="<?= $data['remark63'] ?>" style="margin-left: 5px;border: none;" readonly></td>

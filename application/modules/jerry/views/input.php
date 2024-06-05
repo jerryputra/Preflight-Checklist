@@ -127,7 +127,7 @@ include 'application\modules\jerry\controllers\logic.php';
                         <td>Lav Build In Firex</td>
                         <td><input type="number" name="qty1" id="emer3" value="" style="margin-left: 5px;"></td>
                         <td><input type="checkbox" name="s_status3" id="checkbox" value=""></td>
-                        <td><input type="checkbox" name="us_status3" id="checkbox" value=""></td>
+                        <td><input type="checkbox" name="us_status3" id="checkbox" value=""ve></td>
                         <td><input type="text" name="remark3" id="emer6" value="" style="margin-left: 5px;"></td>
                         <td><input type="checkbox" name="s_status4" id="checkbox" value=""></td>
                         <td><input type="checkbox" name="us_status4" id="checkbox" value=""></td>
@@ -506,7 +506,7 @@ include 'application\modules\jerry\controllers\logic.php';
                         window.scrollTo(0, 0);
                     },
                     error: function(xhr, status, error) {
-                        // Menangani kesalahan jika permintaan AJAX gagal
+                        // Menangani kesalahan jika permintaan AJAX gagal   
                         console.error(xhr.responseText);
                     }
                 });
