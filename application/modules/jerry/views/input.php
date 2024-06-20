@@ -115,7 +115,7 @@ include 'application\modules\jerry\controllers\logic.php';
                     </tr>
                     <tr>
                         <td>Lav Smoke Detector</td>
-                        <td><input type="number" name="qty" id="emer2" value="" style="margin-left: 5px;" ></td>
+                        <td><input type="number" name="qty" id="emer2" value="" style="margin-left: 5px;"></td>
                         <td><input type="checkbox" name="s_status" id="checkbox" value=""></td>
                         <td><input type="checkbox" name="us_status" id="checkbox" value=""></td>
                         <td><input type="text" name="remark1" id="emer5" value="" style="margin-left: 5px;"></td>
@@ -127,7 +127,7 @@ include 'application\modules\jerry\controllers\logic.php';
                         <td>Lav Build In Firex</td>
                         <td><input type="number" name="qty1" id="emer3" value="" style="margin-left: 5px;"></td>
                         <td><input type="checkbox" name="s_status3" id="checkbox" value=""></td>
-                        <td><input type="checkbox" name="us_status3" id="checkbox" value=""ve></td>
+                        <td><input type="checkbox" name="us_status3" id="checkbox" value="" ve></td>
                         <td><input type="text" name="remark3" id="emer6" value="" style="margin-left: 5px;"></td>
                         <td><input type="checkbox" name="s_status4" id="checkbox" value=""></td>
                         <td><input type="checkbox" name="us_status4" id="checkbox" value=""></td>
@@ -511,6 +511,22 @@ include 'application\modules\jerry\controllers\logic.php';
                     }
                 });
             });
+        });
+    </script>
+    <script>
+        function formatState(state) {
+            if (!state.id) {
+                return state.text;
+            }
+            var baseUrl = "/user/pages/images/flags";
+            var $state = $(
+                '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+            );
+            return $state;
+        };
+
+        $(".js-example-templating").select2({
+            templateResult: formatState
         });
     </script>
 
